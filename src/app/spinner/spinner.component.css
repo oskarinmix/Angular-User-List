@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+}
+
+body {
+	background: #ffff00;
+}
+
+.conteiner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* box-shadow: 0 0 5px rgba(0, 0, 0, .2), 2px 2px 2px rgba(0, 0, 0, .1), -2px -2px 2px rgba(0, 0, 0, .1); */
+}
+
+.conteiner .box--conteiner {
+	width: 50%;
+	height: 80%;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	animation: rotate 1s ease infinite;
+}
+.conteiner .box--conteiner .box {
+	/* background: #fff; */
+	/* overflow: hidden; */
+	position: relative;
+}
+.conteiner .box--conteiner .box .circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 50px;
+	width: 50px;
+	background: #222;
+	border-radius: 50%;
+}
+.conteiner .box--conteiner .box .circle--1 {
+	animation: circle--1 ease 1200ms infinite;
+	/* animation: rotate 1s ease infinite; */
+}
+.conteiner .box--conteiner .box .circle--2 {
+	background: #ffff00;
+	animation: circle--2 ease 1200ms infinite;
+}
+@keyframes circle--1 {
+	0% {
+		top: 50%;
+	}
+	50% {
+		top: 120%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+@keyframes circle--2 {
+	0% {
+		top: 50%;
+	}
+	50% {
+		top: -50%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+.support{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+	display: flex;
+}
+a{
+	margin: 0 10px;
+	color: #fff;
+	font-size: 1.5rem;
+	transition: all 400ms ease;
+}
+
+a:hover{
+	color: #222;
+}
