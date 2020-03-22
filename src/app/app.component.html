@@ -39,12 +39,15 @@
           <p>LastName : <span>{{user.name.split(' ')[1]}}</span></p>
           <p>Age : <span>{{user.age}}</span></p>
           <p>Biography : <span>{{user.company.catchPhrase + ' ' + user.company.name}}</span></p>
-          <span>Phone Numbers :</span>
-          <ul>
-            <li> {{ user.phone}}</li>
-            <li> {{ user.address.zipcode}}</li>
-            <li> {{ user.address.geo.lat + user.address.geo.lng}}</li>
+
+          <ul class="list-group">
+            <li class="list-group-item active">Phone Numbers</li>
+            <li class="list-group-item">{{ user.phone}}</li>
+            <li class="list-group-item">{{ user.address.zipcode}}</li>
+            <li class="list-group-item">{{ user.address.geo.lat + user.address.geo.lng}}</li>
+
           </ul>
+
         </div>
         <div class="col-xs-12 col-sm-6 p-5">
         <img src="https://randomuser.me/api/portraits/{{user.sex}}/{{user.id}}.jpg" alt="{{user.name}}" style="width: 60%" class="rounded">
